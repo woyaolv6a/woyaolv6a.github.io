@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快点升到Lv6吧博客</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <meta name="google" content="notranslate">
+  <link rel="shortcut icon" href="./img/favicon.png" />
+  <script type="text/javascript">
+    //禁止鼠标右击
+    document.oncontextmenu = function() {
+    event.returnValue = false;
+     };
+    //禁用开发者工具F12
+    document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
+    let e = event || window.event || arguments.callee.caller.arguments[0];
+    if (e && e.keyCode == 123) {
+    e.returnValue = false;
+    return false;
+    }
+    };
+    let userAgent = navigator.userAgent;
+    if (userAgent.indexOf("Firefox") > -1) {
+    let checkStatus;
+    let devtools = /./;
+    devtools.toString = function() {
+    checkStatus = "on";
+    };
+    setInterval(function() {
+    checkStatus = "off";
+    console.log(devtools);
+    console.log(checkStatus);
+    console.clear();
+    if (checkStatus === "on") {
+    let target = "";
+    try {
+    window.open("about:blank", (target = "_self"));
+    } catch (err) {
+    let a = document.createElement("button");
+    a.onclick = function() {
+    window.open("about:blank", (target = "_self"));
+    };
+    a.click();
+    }
+    }
+    }, 200);
+    } else {
+    //禁用控制台
+    let ConsoleManager = {
+    onOpen: function() {
+    alert("Console is opened");
+    },
+    onClose: function() {
+    alert("Console is closed");
+    },
+    init: function() {
+    let self = this;
+    let x = document.createElement("div");
+    let isOpening = false,
+    isOpened = false;
+    Object.defineProperty(x, "id", {
+    get: function() {
+    if (!isOpening) {
+    self.onOpen();
+    isOpening = true;
+    }
+    isOpened = true;
+    return true;
+    }
+    });
+    setInterval(function() {
+    isOpened = false;
+    console.info(x);
+    console.clear();
+    if (!isOpened && isOpening) {
+    self.onClose();
+    isOpening = false;
+    }
+    }, 200);
+    }
+    };
+    ConsoleManager.onOpen = function() {
+    //打开控制台，跳转
+    let target = "";
+    try {
+    window.open("about:blank", (target = "_self"));
+    } catch (err) {
+    let a = document.createElement("button");
+    a.onclick = function() {
+    window.open("about:blank", (target = "_self"));
+    };
+    a.click();
+    }
+    };
+    ConsoleManager.onClose = function() {
+    alert("Console is closed!!!!!");
+    };
+    ConsoleManager.init();
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./img/bg.jpg'); /* 背景图片链接 */
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #eeff34;
+        }
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #eeff34;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #eeff34;
+        }
+        .post {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .post:hover {
+            transform: translateY(-5px);
+        }
+        .post h2 {
+            color: #eeff34;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="shortcut icon" href="./img/favicon.png" />
+</head>
+<body>
+    <header>
+        <h1>快点升到Lv6吧的博客</h1>
+        <nav>
+            <a href="https://woyaolv6a.github.io">首页</a>
+            <a href="#contact">联系</a>
+        </nav>
+    </header>
+    <main>
+        <article class="post">
+            <h2 style="display: inline;">我的博客发布啦！！！</h2>
+<span style="font-size: 0.8em; color: gray;">（2024年11月24日20时09分）</span>
+            <p>好消息，我的博客发布啦！！！在……</p>
+            <a href="./article/2024/11/24/我的博客发布啦！！！/index.html" style="color: #40f9ff;">继续阅读</a>
+        </article>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 快点升到Lv6吧博客, 版權所有.</p>
+    </footer>
+</body>
+</html>

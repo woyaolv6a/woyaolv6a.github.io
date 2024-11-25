@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章-我的博客发布啦！！！</title>
+    <meta name="google" content="notranslate">
+  <link rel="shortcut icon" href="./img/favicon.png" />
+  <script type="text/javascript">
+     //禁止鼠标右击
+     document.oncontextmenu = function() {
+    event.returnValue = false;
+     };
+    //禁用开发者工具F12
+    document.onkeydown = document.onkeyup = document.onkeypress = function(event) {
+    let e = event || window.event || arguments.callee.caller.arguments[0];
+    if (e && e.keyCode == 123) {
+    e.returnValue = false;
+    return false;
+    }
+    };
+    let userAgent = navigator.userAgent;
+    if (userAgent.indexOf("Firefox") > -1) {
+    let checkStatus;
+    let devtools = /./;
+    devtools.toString = function() {
+    checkStatus = "on";
+    };
+    setInterval(function() {
+    checkStatus = "off";
+    console.log(devtools);
+    console.log(checkStatus);
+    console.clear();
+    if (checkStatus === "on") {
+    let target = "";
+    try {
+    window.open("about:blank", (target = "_self"));
+    } catch (err) {
+    let a = document.createElement("button");
+    a.onclick = function() {
+    window.open("about:blank", (target = "_self"));
+    };
+    a.click();
+    }
+    }
+    }, 200);
+    } else {
+    //禁用控制台
+    let ConsoleManager = {
+    onOpen: function() {
+    alert("Console is opened");
+    },
+    onClose: function() {
+    alert("Console is closed");
+    },
+    init: function() {
+    let self = this;
+    let x = document.createElement("div");
+    let isOpening = false,
+    isOpened = false;
+    Object.defineProperty(x, "id", {
+    get: function() {
+    if (!isOpening) {
+    self.onOpen();
+    isOpening = true;
+    }
+    isOpened = true;
+    return true;
+    }
+    });
+    setInterval(function() {
+    isOpened = false;
+    console.info(x);
+    console.clear();
+    if (!isOpened && isOpening) {
+    self.onClose();
+    isOpening = false;
+    }
+    }, 200);
+    }
+    };
+    ConsoleManager.onOpen = function() {
+    //打开控制台，跳转
+    let target = "";
+    try {
+    window.open("about:blank", (target = "_self"));
+    } catch (err) {
+    let a = document.createElement("button");
+    a.onclick = function() {
+    window.open("about:blank", (target = "_self"));
+    };
+    a.click();
+    }
+    };
+    ConsoleManager.onClose = function() {
+    alert("Console is closed!!!!!");
+    };
+    ConsoleManager.init();
+    }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./img/bg.png'); /* 添加背景图像 */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4A90E2;
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 2px solid #4A90E2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>欢迎来到我的博客</h1>
+    <h2>今天的主题：学习HTML与CSS的乐趣</h2>
+    <p>在这个数字化的时代，学习如何构建网站变得至关重要。HTML是构建网页的基础，而CSS则帮助我们美化网页。</p>
+    <p>以下是我在学习过程中遇到的一些有趣的知识：</p>
+    <ul>
+        <li>HTML使用标签来构建页面结构。</li>
+        <li>CSS可以用来控制页面的布局与样式。</li>
+        <li>通过使用响应式设计，可以确保网页在不同设备上的良好表现。</li>
+    </ul>
+    <p>想要深入学习，可以访问<a href="https://www.w3schools.com" target="_blank">W3Schools</a>进行更多的学习。</p>
+    <div class="footer">
+        <p>© 2023 快点升到Lv6吧的博客 - 快点升到Lv6吧</p>
+    </div>
+</div>
+</body>
+</html>
