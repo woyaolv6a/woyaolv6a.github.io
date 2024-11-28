@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快点升到Lv6吧博客</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <title>文章-留言</title>
     <meta name="google" content="notranslate">
   <link rel="shortcut icon" href="./img/favicon.png" />
+  <link rel="stylesheet" href="./备注.css">
   <script type="text/javascript">
-    //禁止鼠标右击
-    document.oncontextmenu = function() {
+     //禁止鼠标右击
+     document.oncontextmenu = function() {
     event.returnValue = false;
      };
     //禁用开发者工具F12
@@ -101,82 +101,61 @@
     </script>
     <style>
         body {
-            font-family: 'Noto Sans JP', sans-serif;
+            font-family: Arial, sans-serif;
+            background-image: url('./img/bg.png'); /* 添加背景图像 */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-image: url('./img/bg.jpg'); /* 背景图片链接 */
-            background-size: cover;
-            color: #fff;
         }
-        header {
-            background-color: rgba(0, 0, 0, 0.7);
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
             padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid #eeff34;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #eeff34;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        nav a:hover {
-            color: #eeff34;
-        }
-        .post {
-            background-color: rgba(0, 0, 0, 0.7);
-            margin: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .post:hover {
-            transform: translateY(-5px);
-        }
-        .post h2 {
-            color: #eeff34;
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            color: #4A90E2;
             text-align: center;
-            padding: 10px;
+        }
+        h2 {
+            border-bottom: 2px solid #4A90E2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .footer {
+            text-align: center;
             margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
-    <link rel="shortcut icon" href="./img/favicon.png" />
 </head>
 <body>
-    <header>
-        <h1>快点升到Lv6吧的博客</h1>
-        <nav>
-            <a href="/666他开了/Home_page/index.html">首页</a>
-            <a href="./article/0000/留言/index.html">留言</a>
-        </nav>
-    </header>
-    <main>
-        <article class="post">
-            <h2 style="display: inline;">我的博客发布啦！！！</h2>
-<span style="font-size: 0.8em; color: gray;">（2024年11月24日20时09分）</span>
-            <p>好消息，我的博客发布啦！！！在......</p>
-            <a href="./article/2024/11/24/我的博客发布啦！！！/index.html" style="color: #40f9ff;">继续阅读</a>
-        </article>
-        <article class="post">
-        <h2 style="display: inline;">极域杀手推荐</h2>
-<span style="font-size: 0.8em; color: gray;">（2024年11月28日22时49分）</span>
-            <p>电脑一直被“极域”控制？我......</p>
-            <a href="./article/2024/11/28/极域杀手/index.html" style="color: #40f9ff;">继续阅读</a>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; 2024 快点升到Lv6吧博客, 版權所有.</p>
-    </footer>
+<div class="container">
+    <h1>留言</h1>
+    <h2>Lv6博客的留言</h2>
+    <p>求助：我的网站背景为什么会变成这样</p>
+    <p>以下是截图</p>
+    <p>github账号与密码在源码中，👍👍👍</p>
+    <img src="./demonstration/a1.png" alt="描述" width="800" height="450">
+    <div class="footer">
+        <p>© 2024 快点升到Lv6吧的博客 - 快点升到Lv6吧</p>
+    </div>
+</div>
 </body>
 </html>
