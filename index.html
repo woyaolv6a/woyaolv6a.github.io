@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快点升到Lv6吧博客</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <meta name="google" content="notranslate">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lv6最喜欢玩原神</title>
+  <link rel="stylesheet" href="./index.css">
+  <meta name="google" content="notranslate">
   <link rel="shortcut icon" href="./img/favicon.png" />
   <script type="text/javascript">
     //禁止鼠标右击
@@ -99,84 +101,24 @@
     ConsoleManager.init();
     }
     </script>
-    <style>
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('./img/bg.jpg'); /* 背景图片链接 */
-            background-size: cover;
-            color: #fff;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid #eeff34;
-        }
-        h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #eeff34;
-        }
-        nav {
-            margin-top: 20px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-        nav a:hover {
-            color: #eeff34;
-        }
-        .post {
-            background-color: rgba(0, 0, 0, 0.7);
-            margin: 20px;
-            padding: 15px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .post:hover {
-            transform: translateY(-5px);
-        }
-        .post h2 {
-            color: #eeff34;
-        }
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
-    <link rel="shortcut icon" href="./img/favicon.png" />
 </head>
+
 <body>
-    <header>
-        <h1>快点升到Lv6吧的博客</h1>
-        <nav>
-            <a href="/666他开了/Home_page/index.html">首页</a>
-            <a href="./article/0000/留言/index.html">留言</a>
-        </nav>
-    </header>
-    <main>
-        <article class="post">
-            <h2 style="display: inline;">我的博客发布啦！！！</h2>
-<span style="font-size: 0.8em; color: gray;">（2024年11月24日20时09分）</span>
-            <p>好消息，我的博客发布啦！！！在......</p>
-            <a href="./article/2024/11/24/我的博客发布啦！！！/index.html" style="color: #40f9ff;">继续阅读</a>
-        </article>
-        <article class="post">
-        <h2 style="display: inline;">极域杀手推荐</h2>
-<span style="font-size: 0.8em; color: gray;">（2024年11月28日22时49分）</span>
-            <p>电脑一直被“极域”控制？我......</p>
-            <a href="./article/2024/11/28/极域杀手/index.html" style="color: #40f9ff;">继续阅读</a>
-        </article>
-    </main>
-    <footer>
-        <p>&copy; 2024 快点升到Lv6吧博客, 版權所有.</p>
-    </footer>
+  <div id="bg"></div>
+  <div id="modal" class="modal_text">
+    <img src="./img/avatar2.jpg" alt="avatar" class="modal__img" width="200" height="200">
+    <div class="modal__name">快点升到Lv6吧</div>
+    <div class="modal__intro">我要Lv6!!!</div>
+    <div class="modal_tech">
+      ps：我喜欢玩原神
+    </div>
+    <div class="button_group">
+      <a href="./Home_page/index.html" class="modal__button">进入博客</a>
+      <a href="https://space.bilibili.com/3546749994011551/" class="modal__button github">哔哩哔哩</a>
+    </div>
+  </div>
 </body>
+
+<script src="./particle.js" color="0,0,0" opacity="1" zindex="-2" count="99"></script>
+
 </html>
